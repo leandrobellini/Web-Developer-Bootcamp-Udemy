@@ -1,0 +1,21 @@
+h1{
+  color: red;
+}
+
+li{
+  color: green;
+}
+
+ul{
+  /*border-color: purple;
+  border-width: 3px;
+  border-style: solid;*/
+
+  border: purple 3px dashed;
+}
+
+body{
+  background: url(https://us.123rf.com/450wm/paylessimages/paylessimages1507/paylessimages150744746/49297291-heavy-rains.jpg?ver=6);
+  background-size: cover;
+
+}
