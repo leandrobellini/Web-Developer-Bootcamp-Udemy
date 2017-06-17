@@ -17,6 +17,11 @@
         display: block;
       }
 
+      .my_container{
+        max-width: 350px;
+        margin: 0 auto;
+      }
+
       .navbar-xs .navbar-primary .navbar { min-height:28px; height: 28px; }
 
     </style>
@@ -54,7 +59,20 @@
 
     </nav>
 
+    <div class="container my_container">
+      <form>
+        <div class="form-group ">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control " id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Password">
+        </div>
 
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+    </div>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
