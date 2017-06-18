@@ -1,0 +1,30 @@
+//Numbers
+4
+4.3
+-10
+
+//Strings
+"Hello My Friend"
+
+//Booleans
+true
+false
+
+//null and undefined
+null
+undefined
+
+
+//var that are declared but not initialized are undefined
+var name;
+var age;
+
+//null is "explicitly nothing"
+var name = null;
+
+//alert("Error");
+
+//console.log("Error message");
+
+
+//name = prompt("What is your name?")
