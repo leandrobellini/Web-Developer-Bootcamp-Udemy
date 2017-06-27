@@ -1,4 +1,5 @@
-var colors = generateRandomColors(6);
+var numSquares = 6;
+var colors = generateRandomColors(numSquares);
 
 //All elements of the HTML file
 var squares = document.querySelectorAll(".square");
@@ -6,6 +7,68 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var msgDisplay = document.getElementById("message");
 var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("button");
+var easyBtn = document.getElementById("easyBtn");
+var hardBtn = document.getElementById("hardBtn");
+
+
+easyBtn.addEventListener("click", function(){
+  this.classList.add("selected");
+  hardBtn.classList.remove("selected");
+
+  numSquares = 3;
+
+  colors = generateRandomColors(numSquares);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+
+  for(var i = 0; i < squares.length; i++){
+    //if the square is in the colors array, change it! Else, remove it
+    if(colors[i]){
+      squares[i].style.background = colors[i];
+    }else{
+      squares[i].style.display = "none";
+    }
+  }
+
+  h1.style.background = "steelblue";
+});
+
+hardBtn.addEventListener("click", function(){
+  this.classList.add("selected");
+  easyBtn.classList.remove("selected");
+
+  numSquares = 6;
+
+  colors = generateRandomColors(numSquares);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor;
+
+  for(var i = 0; i < squares.length; i++){
+    //if the square is in the colors array, change it! Else, remove it
+    squares[i].style.background = colors[i];
+    squares[i].style.display = "block";
+  }
+
+  h1.style.background = "steelblue";
+});
+
+resetButton.addEventListener("click", function(){
+  colors = generateRandomColors(numSquares);
+
+  pickedColor = pickColor();
+
+  colorDisplay.textContent = pickedColor;
+
+  for(var i = 0; i < squares.length; i++){
+      squares[i].style.backgroundColor = colors[i];
+  }
+
+  resetButton.textContent = "New colors";
+
+  h1.style.background = "steelblue";
+
+});
 
 //Shows the right color to the user
 colorDisplay.textContent = pickedColor;
@@ -23,6 +86,7 @@ for(var i = 0; i < squares.length; i++){
       msgDisplay.textContent = "Correct!";
       changeColors(pickedColor);
       h1.style.backgroundColor = pickedColor;
+      resetButton.textContent = "Play Again?";
     }else{
       this.style.backgroundColor = "#232323";
       msgDisplay.textContent = "Try Again!";
