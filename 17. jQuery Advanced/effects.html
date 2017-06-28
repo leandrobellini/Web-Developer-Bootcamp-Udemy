@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Effects</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <style media="screen">
+        div{
+          width: 100px;
+          height: 100px;
+          float: left;
+          background: teal;
+          margin: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <button type="button" name="button">Click me!</button>
+    <div class="">
+      Hello
+    </div>
+    <div class="">
+      Aowww
+    </div>
+    <div class="">
+      Third div
+    </div>
+
+    <script type="text/javascript">
+      $("button").on("click", function(){
+        $("div").fadeOut(1000, function(){
+          $(this).remove();
+        });
+      });
+    </script>
+
+  </body>
+</html>
