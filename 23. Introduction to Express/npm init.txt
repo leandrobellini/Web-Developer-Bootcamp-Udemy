@@ -1,0 +1,2 @@
+npm init (Cria um arquivo package.json com informaçoes do meu projeto)
+npm install pacote --save (Inclui esse pacote no meu arquivo package.json como dependencia)
