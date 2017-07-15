@@ -1,0 +1,23 @@
+mongod
+mongo
+help
+show dbs
+show collections
+
+insert
+find
+update
+remove
+
+db.dogs.insert({name: "Kelly", age: "5"})
+db.dogs.insert({name: "Melita", age: "10"})
+db.dogs.find()
+db.dogs.find({name: "Kelly"})
+db.dogs.update({name: "Kelly"}, {age: "3"}) //sobrescreve tudo
+db.dogs.update({name: "Melita"}, {$set: {age: "15", weight: "55"}}) //atualiza específicos e add novos campos
+db.dogs.remove({name: "Melita"})
+
+
+
+ls /data/db/
+
