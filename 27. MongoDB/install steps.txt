@@ -1,0 +1,13 @@
+$sudo apt-get install -y mongodb-org
+
+$mongod --bind_ip=$IP --nojournal
+
+$mongo
+
+https://docs.c9.io/v1.0/docs/setup-a-database
+
+leandrobellini:~/workspace/YelpCamp/v1 $ touch startMongoDB.sh
+leandrobellini:~/workspace/YelpCamp/v1 $ echo "mongod --bind_ip=$IP --nojournal" > startMongoDB.sh 
+leandrobellini:~/workspace/YelpCamp/v1 $ cat startMongoDB.sh 
+mongod --bind_ip=0.0.0.0 --nojournal
+leandrobellini:~/workspace/YelpCamp/v1 $ chmod a+x startMongoDB.sh 

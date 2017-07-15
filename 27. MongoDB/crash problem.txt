@@ -1,0 +1,13 @@
+If you leave it running then Cloud 9 could timeout and cause mongo to crash. If this happens, try the following steps to repair it.
+
+From the command line, run:
+
+    cd ~
+    ./mongod --repair
+
+If you're still having trouble getting it to run then find the /data directory (it should be inside of ~ or ~/workspace) and cd into it. Once inside, run rm mongod.lock then cd back into ~ and run ./mongod again (see below).
+
+    cd ~/data
+    rm mongod.lock
+    cd
+    ./mongod
