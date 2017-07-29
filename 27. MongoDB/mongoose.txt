@@ -1,0 +1,8 @@
+Update: Another issue that has just surfaced in the last day or so is this error when using mongoose:
+
+    `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, 
+    or set the `useMongoClient` option if using `connect()` or `createConnection()`
+
+The temporary solution, until the creators of mongoose fix the bug, is to use the following command when installing mongoose: npm install mongoose@4.10.8 --save instead of the one Colt uses here which is simply npm install mongoose  (or in latter lectures: npm install mongoose --save)
+
+So to be clear, please use this command when installing mongoose: npm install mongoose@4.10.8 --save 

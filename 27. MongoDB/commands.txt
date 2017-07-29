@@ -17,6 +17,8 @@ db.dogs.update({name: "Kelly"}, {age: "3"}) //sobrescreve tudo
 db.dogs.update({name: "Melita"}, {$set: {age: "15", weight: "55"}}) //atualiza específicos e add novos campos
 db.dogs.remove({name: "Melita"})
 
+db.dropDatabase() //Removes the current database, deleting the associated data files.
+
 
 
 ls /data/db/
