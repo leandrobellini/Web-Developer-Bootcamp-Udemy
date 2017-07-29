@@ -19,6 +19,10 @@ db.dogs.remove({name: "Melita"})
 
 db.dropDatabase() //Removes the current database, deleting the associated data files.
 
+db.campgrounds.drop()
+
+
+mongod --dbpath /data/db --repair		(Caso dê algum erro pq o banco nao foi fechado corretamente! Fica com Lock)
 
 
 ls /data/db/
