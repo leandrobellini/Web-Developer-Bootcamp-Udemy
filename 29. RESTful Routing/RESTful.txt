@@ -1,0 +1,8 @@
+REST - a mapping between HTTP routes and CRUD
+
+BLOG
+
+CREATE
+READ	//allblogs
+UPDATE	/updateBlog/:id
+DESTROY	/destroyBlog/:id
