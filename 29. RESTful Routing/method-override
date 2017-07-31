@@ -1,0 +1,9 @@
+HTML don't support PUT request and DELETE, soooo... we use method-override:
+
+
+npm install method-override --save
+
+
+//in the code
+var methodOverride = require("method-override");
+app.use(methodOverride("_method"));
